@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>React App</title><link href="/static/css/main.f03eae23.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script type="text/javascript" src="/static/js/main.0738801d.js"></script></body></html>
+
+<script>
+    var HOST = location.origin.replace(/^http/, 'ws')
+var ws = new WebSocket(HOST);
+var el;
+
+ws.onmessage = function (event) {
+  el = document.getElementById('server-time');
+  el.innerHTML = 'Server time: ' + event.data;
+};
+</script>
